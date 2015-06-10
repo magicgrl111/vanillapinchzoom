@@ -1,0 +1,31 @@
+{
+  "name": "vanillapinchzoom",
+  "version": "0.0.0",
+  "description": "A fork of RTP Pinch Zoom without jQuery.",
+  "main": "src/index.js",
+  "scripts": {
+    "build": "npm run browserify && npm run min",
+    "browserify": "browserify src/index.js --standalone VanillaPinch > dist/vanillapinchzoom.js",
+    "min": "uglifyjs dist/vanillapinchzoom.js > dist/vanillapinchzoom.min.js",
+    "test": "echo \"Maybe there will be tests one day...\" && exit 0",
+    "prepublish": "npm run build"
+  },
+  "keywords": [
+    "vanilla",
+    "pinch",
+    "zoom",
+    "pinchzoom"
+  ],
+  "author": {
+    "name": "Selby Walker",
+    "email": "selby.e.walker@gmail.com"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "object-assign": "^2.0.0"
+  },
+  "devDependencies": {
+    "browserify": "^10.2.1",
+    "uglify-js": "^2.4.22"
+  }
+}
